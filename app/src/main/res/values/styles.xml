@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="button_regular" parent="@android:style/Widget.Button">
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:backgroundTint">@color/none</item>
+        <item name="android:tint">@color/none</item>
+    </style>
+</resources>

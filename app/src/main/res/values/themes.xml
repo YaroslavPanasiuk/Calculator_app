@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Calculator" parent="android:Theme.Material.Light.NoActionBar" >
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/secondary</item>
+        <item name="android:statusBarColor">#ddd</item>
+        <item name="android:background">#ddd</item>
+        <item name="android:colorAccent">#090909</item>
+    </style>
+    <style name="Theme.CalculatorDark" parent="android:Theme.Material.NoActionBar" >
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/secondary</item>
+        <item name="android:statusBarColor">#090909</item>
+        <item name="android:background">#090909</item>
+        <item name="android:colorAccent">#ddd</item>
+    </style>
+</resources>

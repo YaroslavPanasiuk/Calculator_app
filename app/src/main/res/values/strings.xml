@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="clear_btn">C</string>
+    <string name="delete_btn">X</string>
+    <string name="divide_btn">÷</string>
+    <string name="multiply_btn">×</string>
+    <string name="minus_btn">-</string>
+    <string name="plus_btn">+</string>
+    <string name="equals_btn">=</string>
+    <string name="one_btn">1</string>
+    <string name="two_btn">2</string>
+    <string name="three_btn">3</string>
+    <string name="four_btn">4</string>
+    <string name="five_btn">5</string>
+    <string name="six_btn">6</string>
+    <string name="seven_btn">7</string>
+    <string name="eight_btn">8</string>
+    <string name="nine_btn">9</string>
+    <string name="zero_btn">0</string>
+    <string name="period_btn">.</string>
+    <string name="open_bracket_btn">(</string>
+    <string name="close_bracket_btn">)</string>
+    <string name="initial_operation">0</string>
+    <string name="previous_operations_file">previous_operations</string>
+    <string name="delimiter">"&#32;"</string>
+    <string name="backspace">backspace</string>
+</resources>

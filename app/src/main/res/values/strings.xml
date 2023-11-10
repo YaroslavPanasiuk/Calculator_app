@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Calculator</string>
     <string name="clear_btn">C</string>
+    <string name="clear_all_btn">AC</string>
     <string name="delete_btn">X</string>
     <string name="divide_btn">÷</string>
     <string name="multiply_btn">×</string>

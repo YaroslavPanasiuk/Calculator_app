@@ -11,13 +11,17 @@ import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.ComponentActivity
-import androidx.compose.ui.graphics.Color
-import androidx.core.content.ContextCompat
 import androidx.core.widget.doAfterTextChanged
+import androidx.lifecycle.ProcessLifecycleOwner
 import java.io.File
 import java.util.Locale
 
+
+class ChangePageEventMessage {
+
+}
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -69,10 +73,14 @@ class MainActivity : ComponentActivity() {
         val screen = findViewById<LinearLayout>(R.id.screen)
 
         scrollDown()
+
+        ProcessLifecycleOwner.get().lifecycle.addObserver(AppLifecycleListener())
+
         previousResultsTextView.doAfterTextChanged { scrollDown() }
 
         buttonClear.setOnClickListener {
-            clear()
+            if(buttonClear.text == resources.getString(R.string.clear_all_btn)){ clearAll() }
+            else{ clear() }
             onTextChanged()
         }
         buttonDelete.setOnClickListener {
@@ -114,6 +122,7 @@ class MainActivity : ComponentActivity() {
             showResult()
             writeOperation()
         }
+
         unselectResult()
     }
 
@@ -127,8 +136,13 @@ class MainActivity : ComponentActivity() {
         return resultTextView.text.split(resources.getString(R.string.delimiter)).last()
     }
 
-    private fun onTextChanged(text:CharSequence? = findViewById<TextView>(R.id.currentOperationTextView).text){
+    private fun onTextChanged(text:CharSequence? = findViewById<TextView>(R.id.currentOperationTextView).text.toString()){
         scrollDown()
+        if(text.isNullOrEmpty() || text == resources.getString(R.string.initial_operation)){
+            findViewById<Button>(R.id.buttonClear).text = resources.getString(R.string.clear_all_btn)
+        } else {
+            findViewById<Button>(R.id.buttonClear).text = resources.getString(R.string.clear_btn)
+        }
         if(resultIsSelected()){
             unselectResult()
             if(text.isNullOrEmpty() || getSigns().contains(text.last().toString())){
@@ -143,6 +157,7 @@ class MainActivity : ComponentActivity() {
             }
             showPreviousResults()
         }
+
         showResult()
     }
 
@@ -173,11 +188,11 @@ class MainActivity : ComponentActivity() {
         if(!file.exists()){
             file.createNewFile()
         }
-        val operations = file.readText().lines().zipWithNext {a, b -> a + "\n" + b}.filterIndexed { index, _ -> index % 2 == 0 }.toMutableList()
-        while (operations.size >= resources.getInteger(R.integer.results_rows)/2){
+        val operations = file.readText().lines().toMutableList()
+        while (operations.size >= resources.getInteger(R.integer.results_rows)){
             operations.removeFirst()
         }
-        operations.add("${validatedOperation(currantOperationTextView.text.toString())}\n${resultTextView.text}")
+        operations.add("${validatedOperation(currantOperationTextView.text.toString())}${resources.getString(R.string.delimiter)}${resultTextView.text}")
         file.writeText(operations.joinToString ("\n"))
     }
 
@@ -393,6 +408,13 @@ class MainActivity : ComponentActivity() {
 
     @SuppressLint("SetTextI18n")
     private fun clear(){
+        (findViewById<View>(R.id.resultTextView) as TextView).text = "${resources.getString(R.string.equals_btn)}${resources.getString(R.string.delimiter)}${resources.getString(R.string.initial_operation)}"
+        (findViewById<View>(R.id.currentOperationTextView) as TextView).text = resources.getString(R.string.initial_operation)
+    }
+
+    private fun clearAll(){
+        File(applicationContext.filesDir, resources.getString(R.string.previous_operations_file)).writeText("")
+        showPreviousResults()
         (findViewById<View>(R.id.resultTextView) as TextView).text = "${resources.getString(R.string.equals_btn)}${resources.getString(R.string.delimiter)}${resources.getString(R.string.initial_operation)}"
         (findViewById<View>(R.id.currentOperationTextView) as TextView).text = resources.getString(R.string.initial_operation)
     }

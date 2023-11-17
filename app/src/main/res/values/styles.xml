@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="button_regular" parent="@android:style/Widget.Button">
+    <style name="button_functional" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:textColor">?android:textColorPrimary</item>
-        <item name="android:textSize">@dimen/small_text_size</item>
-        <item name="android:backgroundTint">@color/none</item>
-        <item name="android:tint">@color/none</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMaxTextSize">@dimen/smaller_text_size</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">?colorAccent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+    <style name="button_regular" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMaxTextSize">@dimen/small_text_size</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">?colorPrimary</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+    <style name="button_operational" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMaxTextSize">@dimen/medium_text_size</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">?colorPrimary</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
     </style>
 </resources>

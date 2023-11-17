@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:112290154757:android:5e207fc3b9fed6a2f7cf6c",
         "android_client_info": {
-          "package_name": "com.example.calculator"
+          "package_name": "com.calculatorPackage.calculator"
         }
       },
       "oauth_client": [],

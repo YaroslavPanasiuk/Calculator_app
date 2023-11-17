@@ -19,10 +19,62 @@
     <string name="nine_btn">9</string>
     <string name="zero_btn">0</string>
     <string name="period_btn">.</string>
-    <string name="open_bracket_btn">(</string>
-    <string name="close_bracket_btn">)</string>
+    <string name="open_bracket">(</string>
+    <string name="close_bracket">)</string>
+    <string name="brackets_btn">()</string>
+    <string name="sine_btn">sin</string>
+    <string name="cosine_btn">cos</string>
+    <string name="tan_btn">tan</string>
+    <string name="log_natural_btn">ln</string>
+    <string name="log_10_btn">lg</string>
+    <string name="raise_to_power_btn">x<sup><small>y</small></sup></string>
+    <string name="raise_to_power_sign">^</string>
+    <string name="square_root_btn">√x</string>
+    <string name="square_root_sign">√</string>
+    <string name="factorial_btn">x!</string>
+    <string name="factorial_sign">!</string>
+    <string name="pi_btn">π</string>
+    <string name="e_btn">e</string>
     <string name="initial_operation">0</string>
     <string name="previous_operations_file">previous_operations</string>
     <string name="delimiter">"&#32;"</string>
     <string name="backspace">backspace</string>
+    <string name="prefs_name">data</string>
+    <string name="extend_btn_opened">open</string>
+    <string name="extend_btn_closed">closed</string>
+    <string name="divisionByZeroError">You cannot divide by zero</string>
+    <string name="tanError">You cannot get tangent of %1$s</string>
+    <string name="logError">You can only get log of positive numbers</string>
+    <string name="sqrtError">You cannot get square root of negative number</string>
+    <string name="powError">You cannot raise %1$s to the power of %2$s</string>
+    <string name="tooLargeNumberError">Result is too large</string>
+    <string name="error">error</string>
+    <string name="double_regex">(-?\\d+\\.?\\d*)([Ee]-?\\d+)?</string>
+    <string-array name="errors">
+        <item>@string/divisionByZeroError</item>
+        <item>@string/error</item>
+        <item>@string/logError</item>
+        <item>@string/powError</item>
+        <item>@string/sqrtError</item>
+        <item>@string/tanError</item>
+        <item>@string/tooLargeNumberError</item>
+    </string-array>
+    <string-array name="constants">
+        <item>@string/pi_btn</item>
+        <item>@string/e_btn</item>
+    </string-array>
+    <string-array name="signs">
+        <item>@string/divide_btn</item>
+        <item>@string/multiply_btn</item>
+        <item>@string/plus_btn</item>
+        <item>@string/minus_btn</item>
+        <item>@string/raise_to_power_sign</item>
+    </string-array>
+    <string-array name="functions">
+        <item>@string/log_10_btn</item>
+        <item>@string/log_natural_btn</item>
+        <item>@string/sine_btn</item>
+        <item>@string/cosine_btn</item>
+        <item>@string/tan_btn</item>
+    </string-array>
 </resources>

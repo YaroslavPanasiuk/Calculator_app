@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.calculator"
+    namespace = "com.calculatorPackage.calculator"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.calculator"
+        applicationId = "com.calculatorPackage.calculator"
         minSdk = 27
         targetSdk = 33
         versionCode = 1
@@ -65,6 +65,7 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics:21.5.0")
     implementation("androidx.lifecycle:lifecycle-process:2.6.2")
     implementation("androidx.lifecycle:lifecycle-common:2.6.2")
+    implementation("org.apache.commons:commons-math3:3.6.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")

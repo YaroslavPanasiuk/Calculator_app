@@ -2,7 +2,9 @@
 <resources>
     <integer name="results_rows">1000</integer>
     <integer name="accuracy">7</integer>
-    <integer name="max_chars_in_line">40</integer>
+    <integer name="max_chars_in_line">50</integer>
     <integer name="swipe_threshold">100</integer>
     <integer name="velocity_threshold">100</integer>
+    <integer name="animation_duration_short">200</integer>
+    <integer name="animation_duration_medium">300</integer>
 </resources>

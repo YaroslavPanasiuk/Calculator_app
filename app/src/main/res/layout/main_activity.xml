@@ -101,7 +101,7 @@
             android:textColor="@color/primary"
             android:textSize="@dimen/small_text_size"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:text="@string/open_bracket_btn"
+            android:text="@string/open_bracket"
             app:layout_columnWeight="1"
             app:layout_rowWeight="0.1" />
 
@@ -110,7 +110,7 @@
             android:textColor="@color/primary"
             android:textSize="@dimen/small_text_size"
             style="@style/Widget.AppCompat.Button.Borderless"
-            android:text="@string/close_bracket_btn"
+            android:text="@string/close_bracket"
             app:layout_columnWeight="1"
             app:layout_rowWeight="0.7" />
 

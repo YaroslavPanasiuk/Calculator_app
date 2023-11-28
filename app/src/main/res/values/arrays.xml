@@ -1,0 +1,83 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+    <string-array name="errors">
+        <item>@string/divisionByZeroError</item>
+        <item>@string/error</item>
+        <item>@string/logError</item>
+        <item>@string/powError</item>
+        <item>@string/sqrtError</item>
+        <item>@string/tanError</item>
+        <item>@string/asinError</item>
+        <item>@string/acosError</item>
+        <item>@string/tooLargeNumberError</item>
+    </string-array>
+    <string-array name="constants">
+        <item>@string/pi_btn</item>
+        <item>@string/e_btn</item>
+    </string-array>
+    <string-array name="signs">
+        <item>@string/divide_btn</item>
+        <item>@string/multiply_btn</item>
+        <item>@string/plus_btn</item>
+        <item>@string/minus_btn</item>
+        <item>@string/raise_to_power_sign</item>
+    </string-array>
+    <string-array name="functions">
+        <item>@string/log_10_btn</item>
+        <item>@string/log_natural_btn</item>
+        <item>@string/sine_btn</item>
+        <item>@string/cosine_btn</item>
+        <item>@string/tan_btn</item>
+    </string-array>
+    <string-array name="number_separator_names">
+        <item>@string/separator_none</item>
+        <item>@string/separator_space</item>
+        <item>@string/separator_comma</item>
+        <item>@string/separator_period</item>
+    </string-array>
+    <string-array name="number_separator_values">
+        <item>@string/separator_none</item>
+        <item>@string/delimiter</item>
+        <item>@string/comma_sign</item>
+        <item>@string/period_sign</item>
+    </string-array>
+    <string-array name="number_separator_type_values">
+        <item>@string/separator_indian</item>
+        <item>@string/separator_universal</item>
+    </string-array>
+    <string-array name="decimals_separator_names">
+        <item>@string/separator_period</item>
+        <item>@string/separator_comma</item>
+    </string-array>
+    <string-array name="decimals_separator_values">
+        <item>@string/period_sign</item>
+        <item>@string/comma_sign</item>
+    </string-array>
+    <string-array name="auto_delete_history_options">
+        <item>@string/never</item>
+        <item>@string/after_1_week</item>
+        <item>@string/after_1_month</item>
+        <item>@string/after_1_year</item>
+        <item>@string/after_100_records</item>
+        <item>@string/after_1000_records</item>
+    </string-array>
+
+    <string name="separator_space">space</string>
+    <string name="separator_comma">comma</string>
+    <string name="separator_period">period</string>
+    <string name="never">never</string>
+    <string name="after_1_week">after 1 week</string>
+    <string name="after_1_month">after 1 month</string>
+    <string name="after_1_year">after 1 year</string>
+    <string name="after_100_records">after 100 records</string>
+    <string name="after_1000_records">after 1000 records</string>
+</resources>

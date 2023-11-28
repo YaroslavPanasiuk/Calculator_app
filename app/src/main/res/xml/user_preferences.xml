@@ -1,0 +1,69 @@
+<PreferenceScreen xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        app:title="@string/general_settings_legend"
+        android:layout="@layout/preference_category"
+        tools:ignore="PrivateResource">
+
+        <SeekBarPreference
+            app:key="@string/accuracy_setting"
+            app:title="@string/accuracy_setting"
+            app:defaultValue="@integer/accuracy"
+            app:showSeekBarValue="true"
+            app:seekBarIncrement="1"
+            android:layout="@layout/seek_bar_preference"
+            android:summary="Number of characters after comma"
+            android:max="12"
+            app:min="1"/>
+
+        <ListPreference
+            app:defaultValue="@string/period_sign"
+            app:entries="@array/decimals_separator_names"
+            app:entryValues="@array/decimals_separator_values"
+            android:layout="@layout/preference_regular"
+            app:key="@string/period_setting"
+            app:title="@string/period_setting"
+            app:useSimpleSummaryProvider="true"
+            />
+
+        <ListPreference
+            app:defaultValue="@string/separator_none"
+            app:entries="@array/number_separator_names"
+            app:entryValues="@array/number_separator_values"
+            android:layout="@layout/preference_regular"
+            app:key="@string/separator_setting"
+            app:title="@string/separator_setting"
+            app:useSimpleSummaryProvider="true"/>
+            />
+
+        <ListPreference
+            app:defaultValue="@string/separator_universal"
+            app:entries="@array/number_separator_type_values"
+            app:entryValues="@array/number_separator_type_values"
+            android:layout="@layout/preference_regular"
+            app:key="@string/separator_type_setting"
+            app:title="@string/separator_type_setting"
+            app:useSimpleSummaryProvider="true"/>
+
+        <ListPreference
+            app:defaultValue="@string/after_100_records"
+            app:entries="@array/auto_delete_history_options"
+            app:entryValues="@array/auto_delete_history_options"
+            android:layout="@layout/preference_regular"
+            app:key="@string/auto_delete_history"
+            app:title="@string/auto_delete_history"
+            app:useSimpleSummaryProvider="true"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="@string/interface_settings_legend"
+        android:layout="@layout/preference_category"
+        tools:ignore="PrivateResource">
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

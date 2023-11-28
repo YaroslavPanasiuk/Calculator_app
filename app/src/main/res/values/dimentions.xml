@@ -4,6 +4,8 @@
     <dimen name="smaller_text_size">21sp</dimen>
     <dimen name="big_text_size">60sp</dimen>
     <dimen name="medium_text_size">33sp</dimen>
+    <dimen name="smallest_text_size">20sp</dimen>
+    <dimen name="smallestest_text_size">15sp</dimen>
     <dimen name="min_text_size">18sp</dimen>
     <dimen name="text_step">1sp</dimen>
 </resources>

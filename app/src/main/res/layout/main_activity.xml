@@ -8,6 +8,7 @@
     android:layout_height="fill_parent">
 
     <LinearLayout
+        android:id="@+id/display"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -30,7 +31,7 @@
                 android:paddingEnd="10sp"
                 android:paddingBottom="3sp"
                 android:text=""
-                android:textColor="@color/grey"
+                android:textColor="?textFillColor"
                 android:textSize="@dimen/min_text_size" />
         </ScrollView>
 
@@ -42,7 +43,7 @@
             android:layout_gravity="fill"
             android:maxLength="@integer/max_chars_in_line"
             android:textColor="?android:textColorPrimary"
-            android:maxLines="1"
+            android:maxLines="2"
             android:gravity="bottom|end"
             android:paddingEnd="10sp"
             android:paddingStart="10sp"
@@ -56,24 +57,28 @@
             android:id="@+id/resultTextView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.1"
+            android:layout_weight="0"
             android:layout_gravity="fill"
             android:gravity="top|end"
-            android:maxLines="1"
+            android:maxLines="2"
             android:textSize="@dimen/small_text_size"
             android:layout_marginBottom="0dp"
             android:paddingEnd="10sp"
             android:paddingStart="10sp"
             android:maxLength="@integer/max_chars_in_line"
-            android:textColor="?android:textColorPrimary"
+            android:textColor="?textFillColor"
             android:text=""
-            android:visibility="gone"
+            app:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="@dimen/min_text_size"
+            android:autoSizeMaxTextSize="@dimen/small_text_size"
+            android:autoSizeStepGranularity="@dimen/text_step"
             android:paddingBottom="3sp"
             />
 
     </LinearLayout>
 
     <View
+        android:id="@+id/separator"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/grey"/>
@@ -83,186 +88,242 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        app:columnCount="4"
+        android:backgroundTint="?attr/colorPrimaryDark"
+        app:columnCount="5"
         app:rowCount="5">
+
+
+        <Button
+            android:id="@+id/button_lg"
+            style="@style/button_functional"
+            android:background="@color/none"
+            android:text="@string/log_10_btn"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+
+        <Button
+            android:id="@+id/button_ln"
+            style="@style/button_functional"
+            android:text="@string/log_natural_btn"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="0.00001" />
+
+
+        <Button
+            android:id="@+id/button_sin"
+            style="@style/button_functional"
+            android:text="@string/sine_btn"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="0.00001" />
+
+
+        <Button
+            android:id="@+id/button_cos"
+            style="@style/button_functional"
+            android:text="@string/cosine_btn"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="0.00001" />
+
+
+        <Button
+            android:id="@+id/button_tan"
+            style="@style/button_functional"
+            android:text="@string/tan_btn"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="0.00001" />
+
+
+
+        <Button
+            android:id="@+id/button_raise_to_power"
+            style="@style/button_functional"
+            android:text="@string/raise_to_power_btn"
+            app:layout_columnWeight="0.00001"
+            app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/buttonClear"
-            android:textColor="@color/primary"
-            android:backgroundTint="@color/none"
+            android:background="@drawable/top_left_cornered_button"
+            style="@style/button_operational"
             android:textSize="@dimen/small_text_size"
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:text="@string/clear_btn"
             app:layout_columnWeight="1"
             app:layout_rowWeight="0.7" />
 
-        <Button
-            android:id="@+id/buttonOpenBracket"
-            android:textColor="@color/primary"
-            android:textSize="@dimen/small_text_size"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:text="@string/open_bracket"
+        <ImageButton
+            android:id="@+id/buttonDelete"
+            style="@style/button_operational"
+            android:src="@drawable/backspace"
             app:layout_columnWeight="1"
-            app:layout_rowWeight="0.1" />
+            app:layout_rowWeight="1"
+            android:contentDescription="@string/backspace" />
 
         <Button
-            android:id="@+id/buttonCloseBracket"
-            android:textColor="@color/primary"
+            android:id="@+id/buttonBrackets"
+            style="@style/button_operational"
             android:textSize="@dimen/small_text_size"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:text="@string/close_bracket"
+            android:text="@string/brackets_btn"
             app:layout_columnWeight="1"
             app:layout_rowWeight="0.7" />
 
         <Button
             android:id="@+id/buttonDivide"
-            android:layout_width="75dp"
-            android:textColor="@color/primary"
-            android:textSize="@dimen/medium_text_size"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            android:background="@drawable/top_right_cornered_button"
+            style="@style/button_operational"
             android:text="@string/divide_btn"
             app:layout_rowWeight="0.7"
-            app:layout_columnWeight="0.1" />
+            app:layout_columnWeight="0.6" />
+
+
+        <Button
+            android:id="@+id/button_sqrt"
+            style="@style/button_functional"
+            android:text="@string/square_root_btn"
+            app:layout_columnWeight="0.00001"
+            app:layout_rowWeight="1" />
+
 
         <Button
             android:id="@+id/buttonOne"
-            android:textSize="@dimen/small_text_size"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            style="@style/button_regular"
             android:text="@string/one_btn"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/buttonTwo"
-            android:textColor="?android:textColorPrimary"
-            android:textSize="@dimen/small_text_size"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            style="@style/button_regular"
             android:text="@string/two_btn"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/buttonThree"
-            android:textColor="?android:textColorPrimary"
-            android:textSize="@dimen/small_text_size"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            style="@style/button_regular"
             android:text="@string/three_btn"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/buttonMultiply"
-            android:textColor="@color/primary"
-            android:textSize="@dimen/medium_text_size"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            style="@style/button_operational"
             android:text="@string/multiply_btn"
-            app:layout_columnWeight="0.1"
+            app:layout_columnWeight="0.6"
             app:layout_rowWeight="1" />
+
+
+        <Button
+            android:id="@+id/button_factorial"
+            style="@style/button_functional"
+            android:text="@string/factorial_btn"
+            app:layout_columnWeight="0.00001"
+            app:layout_rowWeight="1" />
+
 
         <Button
             android:id="@+id/buttonFour"
-            android:textColor="?android:textColorPrimary"
-            android:textSize="@dimen/small_text_size"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            style="@style/button_regular"
             android:text="@string/four_btn"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/buttonFive"
-            android:textColor="?android:textColorPrimary"
-            android:textSize="@dimen/small_text_size"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            style="@style/button_regular"
             android:text="@string/five_btn"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/buttonSix"
-            android:textColor="?android:textColorPrimary"
-            android:textSize="@dimen/small_text_size"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            style="@style/button_regular"
             android:text="@string/six_btn"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/buttonMinus"
-            android:textColor="@color/primary"
-            android:textSize="@dimen/medium_text_size"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            style="@style/button_operational"
             android:text="@string/minus_btn"
-            app:layout_columnWeight="0.1"
+            app:layout_columnWeight="0.6"
+            app:layout_rowWeight="1" />
+
+
+        <Button
+            android:id="@+id/button_pi"
+            style="@style/button_functional"
+            android:text="@string/pi_btn"
+            app:layout_columnWeight="0.00001"
             app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/buttonSeven"
-            android:textColor="?android:textColorPrimary"
-            android:textSize="@dimen/small_text_size"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            style="@style/button_regular"
             android:text="@string/seven_btn"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
+
         <Button
             android:id="@+id/buttonEight"
-            android:textColor="?android:textColorPrimary"
-            android:textSize="@dimen/small_text_size"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            style="@style/button_regular"
             android:text="@string/eight_btn"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/buttonNine"
-            android:textColor="?android:textColorPrimary"
-            android:textSize="@dimen/small_text_size"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            style="@style/button_regular"
             android:text="@string/nine_btn"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/buttonPlus"
-            android:textColor="@color/primary"
-            android:textSize="@dimen/medium_text_size"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            style="@style/button_operational"
             android:text="@string/plus_btn"
-            app:layout_columnWeight="0.1"
+            app:layout_columnWeight="0.6"
+            app:layout_rowWeight="1" />
+
+
+        <Button
+            android:id="@+id/button_e"
+            style="@style/button_functional"
+            android:text="@string/e_btn"
+            app:layout_columnWeight="0.00001"
             app:layout_rowWeight="1" />
 
         <ImageButton
-            android:id="@+id/buttonDelete"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:src="@drawable/baseline_keyboard_backspace_24"
+            android:id="@+id/extend_btn"
+            android:background="@drawable/bottom_left_cornered_button"
+            style="@style/button_operational"
+            android:src="@drawable/baseline_open_in_full_24"
+            android:tag="@string/extend_btn_closed"
             app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
-            android:contentDescription="@string/backspace" />
+            app:layout_rowWeight="0.7"
+            android:contentDescription="@string/extend_btn_closed" />
 
         <Button
             android:id="@+id/buttonZero"
-            android:textColor="?android:textColorPrimary"
-            android:textSize="@dimen/small_text_size"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            style="@style/button_regular"
             android:text="@string/zero_btn"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
         <Button
             android:id="@+id/buttonPeriod"
-            android:textColor="?android:textColorPrimary"
-            android:textSize="@dimen/small_text_size"
-            style="@style/Widget.AppCompat.Button.Borderless"
+            style="@style/button_regular"
             android:text="@string/period_btn"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
+
         <Button
             android:id="@+id/buttonEquals"
+            style="@style/button_operational"
             android:textColor="?android:textColorPrimaryInverse"
-            android:textSize="@dimen/medium_text_size"
             android:background="@drawable/round_button"
-            android:backgroundTint="@color/primary"
             android:text="@string/equals_btn"
             app:layout_columnWeight="0.1"
             app:layout_rowWeight="1" />

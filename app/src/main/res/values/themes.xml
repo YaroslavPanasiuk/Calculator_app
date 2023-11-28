@@ -1,21 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.Calculator" parent="android:Theme.Material.Light.NoActionBar" >
-        <item name="colorPrimary">@color/almost_white</item>
-        <item name="colorPrimaryDark">@color/secondary</item>
-        <item name="textFillColor">@color/text_light</item>
-        <item name="android:statusBarColor">#ddd</item>
-        <item name="android:background">#ddd</item>
-        <item name="android:colorAccent">@color/lightGrey</item>
-        <item name="colorAccent">@color/lightGrey</item>
+    <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="colorPrimary">@color/grey</item>
+        <item name="colorAccent">@color/primary</item>
     </style>
-    <style name="Theme.CalculatorDark" parent="android:Theme.Material.NoActionBar" >
+
+    <style name="Theme.CalculatorLight" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/almost_white</item>
+        <item name="textFillColor">@color/almost_black</item>
+        <item name="android:statusBarColor">#ddd</item>
+        <item name="android:textColorPrimary">@color/almost_black</item>
+        <item name="textColorSecondary">@color/text_light</item>
+        <item name="android:backgroundTint">#ddd</item>
+        <item name="textOutlineColor">@color/text_light</item>
+        <item name="android:colorAccent">@color/lightGrey</item>
+        <item name="colorPrimaryDark">@color/lightGrey</item>
+        <item name="colorAccent">@color/primary</item>
+        <item name="popupMenuStyle">@style/PopupMenu</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+    </style>
+
+    <style name="Theme.CalculatorDark" parent="Theme.MaterialComponents.NoActionBar">
         <item name="colorPrimary">@color/almost_black</item>
-        <item name="colorPrimaryDark">@color/secondary</item>
-        <item name="textFillColor">@color/text_dark</item>
+        <item name="textFillColor">@color/almost_white</item>
+        <item name="android:textColorPrimary">@color/almost_white</item>
+        <item name="textColorSecondary">@color/text_dark</item>
         <item name="android:statusBarColor">#090909</item>
-        <item name="android:background">#090909</item>
+        <item name="android:backgroundTint">#090909</item>
+        <item name="textOutlineColor">@color/text_dark</item>
         <item name="android:colorAccent">@color/darkGrey</item>
-        <item name="colorAccent">@color/darkGrey</item>
+        <item name="colorPrimaryDark">@color/darkGrey</item>
+        <item name="colorAccent">@color/primary</item>
+        <item name="popupMenuStyle">@style/PopupMenu</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+    </style>
+
+    <style name="Theme.CalculatorOrange" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/darkGrey</item>
+        <item name="textFillColor">@color/darkGrey</item>
+        <item name="android:backgroundTint">#FF36454f</item>
+        <item name="android:textColorPrimary">@color/almost_white</item>
+        <item name="android:textColorPrimaryInverse">@color/darkGrey</item>
+        <item name="textOutlineColor">@color/grey</item>
+        <item name="textColorSecondary">@color/grey</item>
+        <item name="android:colorAccent">@color/lightGrey</item>
+        <item name="colorPrimaryDark">#FFfaf0e6</item>
+        <item name="colorAccent">@color/orangeTheme</item>
+        <item name="android:statusBarColor">#FF36454f</item>
+        <item name="popupMenuStyle">@style/PopupMenu</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+    </style>
+
+    <style name="Theme.CalculatorOrangeDark" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/darkGrey</item>
+        <item name="textFillColor">@color/lightGrey</item>
+        <item name="android:backgroundTint">#FF36454f</item>
+        <item name="android:textColorPrimary">@color/almost_white</item>
+        <item name="android:textColorPrimaryInverse">@color/darkGrey</item>
+        <item name="textOutlineColor">@color/grey</item>
+        <item name="textColorSecondary">@color/grey</item>
+        <item name="android:colorAccent">@color/lightGrey</item>
+        <item name="colorPrimaryDark">#7a7066</item>
+        <item name="colorAccent">#FFfb8824</item>
+        <item name="android:statusBarColor">#FF36454f</item>
+        <item name="popupMenuStyle">@style/PopupMenu</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+    </style>
+
+    <style name="Theme.CalculatorPurple" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#632B6A</item>
+        <item name="textFillColor">@color/almost_white</item>
+        <item name="textOutlineColor">@color/lightGrey</item>
+        <item name="android:backgroundTint">@color/purpleTheme</item>
+        <item name="android:textColorPrimary">@color/almost_white</item>
+        <item name="android:textColorPrimaryInverse">@color/darkGrey</item>
+        <item name="textColorSecondary">@color/lightGrey</item>
+        <item name="android:colorAccent">@color/lightGrey</item>
+        <item name="colorPrimaryDark">#270E35</item>
+        <item name="colorAccent">#FFC1A0</item>
+        <item name="android:statusBarColor">@color/purpleTheme</item>
+        <item name="popupMenuStyle">@style/PopupMenu</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+    </style>
+
+    <style name="Theme.CalculatorRed" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#000200</item>
+        <item name="textFillColor">@color/almost_white</item>
+        <item name="textOutlineColor">@color/lightGrey</item>
+        <item name="android:backgroundTint">#AE896E</item>
+        <item name="android:textColorPrimary">@color/almost_white</item>
+        <item name="android:textColorPrimaryInverse">@color/darkGrey</item>
+        <item name="textColorSecondary">@color/lightGrey</item>
+        <item name="android:colorAccent">@color/lightGrey</item>
+        <item name="colorPrimaryDark">#511F13</item>
+        <item name="colorAccent">@color/redTheme</item>
+        <item name="android:statusBarColor">#AE896E</item>
+        <item name="popupMenuStyle">@style/PopupMenu</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+    </style>
+
+    <style name="Theme.CalculatorGreen" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#a7bE66</item>
+        <item name="textFillColor">@color/text_light</item>
+        <item name="textOutlineColor">@color/text_light</item>
+        <item name="android:backgroundTint">@color/greenTheme</item>
+        <item name="android:textColorPrimary">@color/almost_black</item>
+        <item name="android:textColorPrimaryInverse">@color/darkGrey</item>
+        <item name="textColorSecondary">@color/text_light</item>
+        <item name="android:colorAccent">@color/lightGrey</item>
+        <item name="colorPrimaryDark">#FFB99C</item>
+        <item name="colorAccent">#CC8400</item>
+        <item name="android:statusBarColor">@color/greenTheme</item>
+        <item name="popupMenuStyle">@style/PopupMenu</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+    </style>
+
+    <style name="Theme.CalculatorGreenDark" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">#475E06</item>
+        <item name="textFillColor">@color/text_dark</item>
+        <item name="textOutlineColor">@color/lightGrey</item>
+        <item name="android:backgroundTint">#698D4A</item>
+        <item name="android:textColorPrimary">@color/almost_white</item>
+        <item name="android:textColorPrimaryInverse">@color/darkGrey</item>
+        <item name="textColorSecondary">@color/lightGrey</item>
+        <item name="android:colorAccent">@color/lightGrey</item>
+        <item name="colorPrimaryDark">#9F593C</item>
+        <item name="colorAccent">#FFBD3D</item>
+        <item name="android:statusBarColor">#475E06</item>
+        <item name="popupMenuStyle">@style/PopupMenu</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+    </style>
+
+    <style name="Theme.CalculatorVanilla" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#B0C1DB</item>
+        <item name="textFillColor">@color/text_light</item>
+        <item name="textOutlineColor">@color/darkGrey</item>
+        <item name="android:backgroundTint">#FFF7F5</item>
+        <item name="android:textColorPrimary">@color/darkGrey</item>
+        <item name="android:textColorPrimaryInverse">@color/lightGrey</item>
+        <item name="textColorSecondary">@color/text_light</item>
+        <item name="android:colorAccent">@color/lightGrey</item>
+        <item name="colorPrimaryDark">#F9D7D6</item>
+        <item name="colorAccent">#aF6878</item>
+        <item name="android:statusBarColor">#FFF7F5</item>
+        <item name="popupMenuStyle">@style/PopupMenu</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+    </style>
+
+    <style name="Theme.CalculatorVanillaDark" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">#40516B</item>
+        <item name="textFillColor">@color/lightGrey</item>
+        <item name="textOutlineColor">@color/lightGrey</item>
+        <item name="android:backgroundTint">#8F8785</item>
+        <item name="android:textColorPrimary">@color/almost_white</item>
+        <item name="android:textColorPrimaryInverse">@color/darkGrey</item>
+        <item name="textColorSecondary">@color/lightGrey</item>
+        <item name="android:colorAccent">@color/lightGrey</item>
+        <item name="colorPrimaryDark">#897776</item>
+        <item name="colorAccent">@color/vanillaTheme</item>
+        <item name="android:statusBarColor">#8F8785</item>
+        <item name="popupMenuStyle">@style/PopupMenu</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
     </style>
 </resources>

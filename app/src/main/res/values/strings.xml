@@ -18,7 +18,9 @@
     <string name="eight_btn">8</string>
     <string name="nine_btn">9</string>
     <string name="zero_btn">0</string>
-    <string name="period_btn">.</string>
+    <string name="period_btn">@string/period_sign</string>
+    <string name="comma_sign">,</string>
+    <string name="period_sign">.</string>
     <string name="open_bracket">(</string>
     <string name="close_bracket">)</string>
     <string name="brackets_btn">()</string>
@@ -35,46 +37,72 @@
     <string name="factorial_sign">!</string>
     <string name="pi_btn">π</string>
     <string name="e_btn">e</string>
+    <string name="exponent">E</string>
     <string name="initial_operation">0</string>
     <string name="previous_operations_file">previous_operations</string>
     <string name="delimiter">"&#32;"</string>
     <string name="backspace">backspace</string>
+    <string name="settings_menuitem">Settings</string>
+    <string name="history_menuitem">History</string>
+    <string name="general_settings_legend">General</string>
+    <string name="interface_settings_legend">Interface</string>
+    <string name="app_settings_legend">App</string>
+    <string name="degrees_units">DEG</string>
+    <string name="radians_units">RAD</string>
+    <string name="accuracy_setting">Precision</string>
+    <string name="separator_setting">Number separator</string>
+    <string name="separator_indian">indian</string>
+    <string name="separator_none">none</string>
+    <string name="separator_universal">universal</string>
+    <string name="theme_setting">Theme</string>
+    <string name="period_setting">Decimals separator</string>
     <string name="prefs_name">data</string>
     <string name="extend_btn_opened">open</string>
     <string name="extend_btn_closed">closed</string>
     <string name="divisionByZeroError">You cannot divide by zero</string>
     <string name="tanError">You cannot get tangent of %1$s</string>
+    <string name="asinError">You cannot get arcsin of %1$s</string>
+    <string name="acosError">You cannot get arccos of %1$s</string>
     <string name="logError">You can only get log of positive numbers</string>
     <string name="sqrtError">You cannot get square root of negative number</string>
     <string name="powError">You cannot raise %1$s to the power of %2$s</string>
-    <string name="tooLargeNumberError">Result is too large</string>
+    <string name="tooLargeNumberError">Number is too large</string>
     <string name="error">error</string>
     <string name="double_regex">(-?\\d+\\.?\\d*)([Ee]-?\\d+)?</string>
-    <string-array name="errors">
-        <item>@string/divisionByZeroError</item>
-        <item>@string/error</item>
-        <item>@string/logError</item>
-        <item>@string/powError</item>
-        <item>@string/sqrtError</item>
-        <item>@string/tanError</item>
-        <item>@string/tooLargeNumberError</item>
-    </string-array>
-    <string-array name="constants">
-        <item>@string/pi_btn</item>
-        <item>@string/e_btn</item>
-    </string-array>
-    <string-array name="signs">
-        <item>@string/divide_btn</item>
-        <item>@string/multiply_btn</item>
-        <item>@string/plus_btn</item>
-        <item>@string/minus_btn</item>
-        <item>@string/raise_to_power_sign</item>
-    </string-array>
-    <string-array name="functions">
-        <item>@string/log_10_btn</item>
-        <item>@string/log_natural_btn</item>
-        <item>@string/sine_btn</item>
-        <item>@string/cosine_btn</item>
-        <item>@string/tan_btn</item>
-    </string-array>
+    <string name="title_activity_tab_view">TabViewActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="title_activity_history">HistoryActivity</string>
+    <string name="clear_history">Clear history</string>
+    <string name="length_btn">Length</string>
+    <string name="area_btn">Area</string>
+    <string name="volume_btn">Volume</string>
+    <string name="mass_btn">Mass</string>
+    <string name="speed_btn">Speed</string>
+    <string name="temp_btn">Temperature</string>
+    <string name="time_btn">Time</string>
+    <string name="data_btn">Data</string>
+    <string name="notation_btn">Notation</string>
+    <string name="title_activity_converter">ConverterActivity</string>
+    <string name="converterType">converterType</string>
+    <string name="recently_selected">recently selected</string>
+    <string name="initialConversion">1</string>
+    <string name="title_notation_activity_converter">NotationConverterActivity</string>
+    <string name="separator_type_setting">Number separation type</string>
+    <string name="auto_delete_history">Auto delete history</string>
+    <string name="ans_btn">ANS</string>
+    <string name="reverse_ans_btn"><sup>1</sup>/<sub>x</sub></string>
+    <string name="exp_btn">EXP</string>
+    <string name="inverse_btn">Inv</string>
+    <string name="percents_btn">%</string>
+    <string name="arcsin_btn">sin<sup><small>-1</small></sup></string>
+    <string name="arccos_btn">cos<sup><small>-1</small></sup></string>
+    <string name="arctan_btn">tan"&#60;"sup"&#62;&#60;"small"&#62;"-1"&#60;"/small"&#62;&#60;"/sup"&#62;"</string>
+    <string name="arcsin">arcsin</string>
+    <string name="arccos">arccos</string>
+    <string name="arctan">arctan</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="calculator">Calculator</string>
 </resources>

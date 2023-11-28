@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <integer name="results_rows">1000</integer>
     <integer name="accuracy">7</integer>
     <integer name="max_chars_in_line">50</integer>
+    <integer name="converter_max_length">15</integer>
     <integer name="swipe_threshold">100</integer>
     <integer name="velocity_threshold">100</integer>
     <integer name="animation_duration_short">200</integer>
